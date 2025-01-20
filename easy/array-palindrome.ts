@@ -1,3 +1,5 @@
+
+
 function firstPalindrome(words: string[]): string {
     for (let word of words){
         if(word===word.split('').reverse().join('')){
@@ -6,7 +8,6 @@ function firstPalindrome(words: string[]): string {
     }
     return "";
   
-    
 };
 
 console.log(firstPalindrome(["racecar", "apple"]));

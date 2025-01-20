@@ -1,14 +1,20 @@
 
-function missingNumber(nums: number[]): number {
+// using the sum of two totalsum- actual sum to get tyhe missin number
 
-    let missing = nums.length;
+function missingNumber(nums:number[]){
 
-    for (let i = 0; i < nums.length; i++) {
+   const max=Math.max(...nums);
+   const actualProduct=nums.reduce((a,b)=>a+b,0)
+   let products=0
 
-        missing ^= i ^ nums[i];
-    }
+   for (let i=1;i<=max;i++){
+    products +=i
+   }
 
-    return missing;
+   return products-actualProduct
+
+   
+
 }
 
-console.log(missingNumber([3, 2, 1,0,5])); // 2
+console.log(missingNumber([3, 2, 1,5])); // 4
