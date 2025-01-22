@@ -7,6 +7,8 @@ function isHappy(n:number):boolean {
         n = getSumOfSquares(n)
     }
 
+    Math.sqrt
+
     return n === 1
 
 }
